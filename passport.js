@@ -24,12 +24,12 @@ module.exports = function () {
             try {
                 var account = {user: '', email: ''};
                 const result = await UserModel.GetUser(id);
-                //console.log(result) >>> result:[[object],[fields]]
-                //console.log(result.result) >>> [{id,password,salt,name,email}]
                 if (result.error) {
                     console.log(result.error);
                     return done(false, null);
                 }
+                //console.log(result) >>> result:[[object],[fields]]
+                //console.log(result.result) >>> [{id,password,salt,name,email}]
                 if (result.result[0].length === 0) {
                     return done(false, null, {message: '아이디 또는 패스워드가 일치하지 않습니다.'});
                 } 

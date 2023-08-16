@@ -32,11 +32,13 @@ app.use(express.urlencoded({ extended: false }));
 const mainRouter    = require('./routes/index');
 const dustRouter    = require('./routes/dust');
 const userRouter    = require('./routes/user');
+const newsRouter    = require('./routes/news');
 
 //라우트 설정
 app.use('/', mainRouter);
 app.use('/dust', dustRouter);
 app.use('/user', userRouter);
+app.use('/news', newsRouter);
 
 //client req 대기중
 const PORT = 8080;
