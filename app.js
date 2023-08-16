@@ -33,12 +33,14 @@ const mainRouter    = require('./routes/index');
 const dustRouter    = require('./routes/dust');
 const userRouter    = require('./routes/user');
 const newsRouter    = require('./routes/news');
+const wifiRouter    = require('./routes/wifi');
 
 //라우트 설정
 app.use('/', mainRouter);
 app.use('/dust', dustRouter);
 app.use('/user', userRouter);
 app.use('/news', newsRouter);
+app.use('/wifi', wifiRouter);
 
 //client req 대기중
 const PORT = 8080;
