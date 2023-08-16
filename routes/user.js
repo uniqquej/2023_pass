@@ -49,4 +49,13 @@ router.post('/signin', passport.authenticate('local-login', {
     failureRedirect: '/user/signin'
 }));
 
+router.get('/signout', function(req, res, next) {
+	req.logout(function(error) {
+        if (error) {
+            return next(error);
+        }
+        res.redirect('/');
+    });
+});
+
 module.exports = router;
