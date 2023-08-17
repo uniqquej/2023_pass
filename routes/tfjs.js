@@ -21,5 +21,21 @@ router.post('/regression2', async function(req, res) {
     res.send(preds);
 });
 
+//inference #1
+router.get('/inference1', async function(req, res) {
+    res.render('tfjs/inference1');
+});
+//inference #2
+router.get('/inference2', async function(req, res) {
+    res.render('tfjs/inference2');
+});
+//inference #3
+router.get('/inference3', async function(req, res) {
+    res.render('tfjs/inference3');
+});
+//inference #4
+router.get('/inference4', async function(req, res) {
+    res.render('tfjs/inference4');
+});
 
 module.exports = router;
