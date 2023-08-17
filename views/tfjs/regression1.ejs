@@ -81,7 +81,7 @@
             });
             testX = tf.tensor(testX, [testX.length]);
             const preds = model.predict(testX).arraySync();
-            // await model.save('downloads://reg_model'); //다운로드 방식으로 모델 저장
+            await model.save('downloads://reg_model'); //다운로드 방식으로 모델 저장
             let html = '';
             for(let i=0; i<preds.length; i++) {
                 html += `${preds[i]}<br>`;
