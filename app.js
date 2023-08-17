@@ -21,6 +21,7 @@ app.use(
 app.use(passport.initialize()); //req에 passport 설정 추가
 app.use(passport.session());    //req.session에 passport 데이터 추가
 app.use(flash());
+app.use(express.static(__dirname + '/public'));
 
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
@@ -34,13 +35,14 @@ const dustRouter    = require('./routes/dust');
 const userRouter    = require('./routes/user');
 const newsRouter    = require('./routes/news');
 const wifiRouter    = require('./routes/wifi');
-
+const maskRouter    = require('./routes/mask');
 //라우트 설정
 app.use('/', mainRouter);
 app.use('/dust', dustRouter);
 app.use('/user', userRouter);
 app.use('/news', newsRouter);
 app.use('/wifi', wifiRouter);
+app.use('/mask', maskRouter);
 
 //client req 대기중
 const PORT = 8080;
