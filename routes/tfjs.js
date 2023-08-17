@@ -38,4 +38,19 @@ router.get('/inference4', async function(req, res) {
     res.render('tfjs/inference4');
 });
 
+// transfer #1
+router.get('/transfer1', async function(req, res) {
+    res.render('tfjs/transfer1');
+});
+
+// transfer #2
+router.get('/transfer2', async function(req, res) {
+    res.render('tfjs/transfer2');
+});
+
+// transfer #3
+router.get('/transfer3', async function(req, res) {
+    res.render('tfjs/transfer3');
+});
+
 module.exports = router;
