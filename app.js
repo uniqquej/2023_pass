@@ -38,6 +38,9 @@ const wifiRouter    = require('./routes/wifi');
 const maskRouter    = require('./routes/mask');
 const gameRouter    = require('./routes/game');
 const tfjsRouter    = require('./routes/tfjs');
+const sttRouter    = require('./routes/stt');
+
+
 
 //라우트 설정
 app.use('/', mainRouter);
@@ -48,6 +51,7 @@ app.use('/wifi', wifiRouter);
 app.use('/mask', maskRouter);
 app.use('/game', gameRouter);
 app.use('/tfjs', tfjsRouter);
+app.use('/stt', sttRouter);
 
 //client req 대기중
 const PORT = 8080;
