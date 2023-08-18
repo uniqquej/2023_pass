@@ -21,7 +21,7 @@
                 <input type="text" class="form-control" id="result">
                 </div>
                 <div class="col-auto">
-                    <i class="fa-solid fa-microphone fa-fade fa-xl"></i>
+                    <i class="fa-solid fa-microphone fa-flip fa-xl"></i>
                 </div>
           </form>
         </div>
@@ -45,6 +45,7 @@
         result.value = '';
     };
     recognition.onresult = function(e) {
+
         let texts = Array.from(e.results).map(results => results[0].transcript).join("");
         result.value = texts;
     };
